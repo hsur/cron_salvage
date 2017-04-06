@@ -26,7 +26,7 @@ open(conf[:file]) do |file|
    
     next unless op == 'CMD' && user == conf[:user]
     cmds[cmd] = {} unless cmds.has_key? cmd
-    cmds[cmd].store( (Time.parse("#{month} #{day} #{time}").to_a)[2..3].reverse, true)
+    cmds[cmd].store( (Time.parse("#{month} #{day} #{time}").to_a)[1..2].reverse, true)
   end
 end
 
